@@ -40,16 +40,15 @@
 .frame .projectText{
     position: absolute;
     inset: 0;
-    background-color: black;
-    opacity: .7;
-    color: white;
+    background-color: white;
+    opacity: .8;
+    color: black ;
     display: none;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     border-radius: 1rem;
     font-size: 1.2rem;
-    transition: all .3s ease-in;
 }
 
 .projectText a{

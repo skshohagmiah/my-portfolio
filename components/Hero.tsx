@@ -45,8 +45,8 @@ const Hero = () => {
           <br />I am a{" "}
           <span className={styles.job}>Front End Web Developer</span>
           <br />
-          I am working with <span className={styles.library}>Reactjs</span> and <span className={styles.library}>Nextjs</span>  for 2 years.
-          <br />I love to design and develop web applications.
+          I have been working with <span className={styles.library}>Reactjs</span> and <span className={styles.library}>Nextjs</span> <br />for 2 years.
+          <br />I really love to design and develop web applications.
         </p>
         <div className={styles.buttons}>
           <button>

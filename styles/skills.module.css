@@ -42,9 +42,9 @@
 .image .imageText{
     position: absolute;
     inset: 0;
-    background-color: black;
-    color: white;
-    opacity: .7;
+    background-color: white;
+    color: black;
+    opacity: .8;
     display: none;
     align-items: center;
     justify-content: center;

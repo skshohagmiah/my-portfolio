@@ -79,7 +79,7 @@ const Contact = () => {
         className={styles.contactForm}
       >
         <h2 className={styles.mobileContact}>Contact Me</h2>
-        <p>great vision without great people is irrelevant</p>
+        <p>great vision without great people is irrelevant So</p>
         <h3>Let`s work together</h3>
         <form action="">
           <input type="text" placeholder="Enter Your Name" required/>
