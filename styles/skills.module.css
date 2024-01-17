@@ -1,0 +1,65 @@
+.container{
+    height: 100%;
+    margin-bottom: 3rem;
+    scroll-margin-top: 3rem;
+}
+
+.container h2{
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.imageGrid{
+    max-width: 800px;
+    width: 100%;
+    margin-inline: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-content: space-between;
+    margin-top: 1rem;
+    gap: 2rem;
+}
+
+.image{
+    position: relative;
+    width: 8rem;
+    height: 8rem;
+    border-radius: 1rem;
+    background: white;
+    opacity: .7;
+    transition: all .3s ease-in-out;
+}
+.image img{
+    border-radius: .5rem;
+    object-fit: cover;
+}
+
+.image:hover .imageText{
+    display: flex;
+}
+
+.image .imageText{
+    position: absolute;
+    inset: 0;
+    background-color: black;
+    color: white;
+    opacity: .7;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    border-radius: .5rem;
+}
+
+@media screen and (max-width:768px) {
+    .imageGrid{
+        grid-template-columns: 1fr 1fr;
+        place-items: center;
+        gap: 1rem;
+    }
+    .image{
+        width: 10rem;
+        height: 10rem;
+    }
+}

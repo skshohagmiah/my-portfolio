@@ -1,0 +1,42 @@
+.container{
+    height: 100%;
+    margin-bottom: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    scroll-margin-top: 3rem;
+}
+
+.container h2{
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+    font-weight: 600;
+    background: linear-gradient(purple, rebeccapurple);
+    background-clip: text;
+    /* -webkit-background-clip: text; */
+}
+
+.container h3{
+    max-width: 800px;
+    margin: auto;
+    margin-top: 1rem;
+}
+
+.container p{
+    max-width: 800px;
+    margin: 0 auto;
+    font-weight: 500;
+}
+
+
+@media screen and (max-width:768px) {
+    .container p , .container h3{
+        text-align: center;
+        padding: .3rem 1rem;
+    }
+    .container{
+        flex-direction: column;
+    }
+}
