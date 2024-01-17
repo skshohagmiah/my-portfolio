@@ -7,16 +7,14 @@ import { useInView } from "react-intersection-observer";
 import { useActiveSection } from "@/context/ActiveSectionContext";
 
 const Projects = () => {
-
-  const {ref,inView }= useInView({threshold:.5})
-  const {setActiveSection} = useActiveSection()
-
+  const { ref, inView } = useInView({ threshold: 0.5 });
+  const { setActiveSection } = useActiveSection();
 
   useEffect(() => {
-    if(inView){
-      setActiveSection('projects')
+    if (inView) {
+      setActiveSection("projects");
     }
-  },[setActiveSection,inView])
+  }, [setActiveSection, inView]);
 
   return (
     <section ref={ref} className={styles.container} id="projects">
@@ -24,7 +22,7 @@ const Projects = () => {
       <div className={styles.projectGrid}>
         <motion.div
           initial={{
-            x: -200,
+            x: -100,
             opacity: 0,
           }}
           whileInView={{
@@ -34,10 +32,10 @@ const Projects = () => {
           transition={{
             duration: 1,
           }}
-          viewport={{once:true, amount:.5}}
+          viewport={{ once: true, amount: 0.5 }}
           className={styles.frame}
         >
-          <Image src={"/teamharbor.png"} alt="teamharbor" fill />
+          <Image src={"/team.png"} alt="teamharbor" fill />
           <div className={styles.projectText}>
             <h3>Teamharbor</h3>
             <h4>Project management application</h4>
@@ -54,7 +52,7 @@ const Projects = () => {
         </motion.div>
         <motion.div
           initial={{
-            x: 200,
+            x: 100,
             opacity: 0,
           }}
           whileInView={{
@@ -64,7 +62,7 @@ const Projects = () => {
           transition={{
             duration: 1,
           }}
-          viewport={{once:true,amount:.5}}
+          viewport={{ once: true, amount: 0.5 }}
           className={styles.frame}
         >
           <Image src="/stayhub.png" alt="stayhub" fill />
@@ -81,7 +79,7 @@ const Projects = () => {
         </motion.div>
         <motion.div
           initial={{
-            x: -200,
+            x: -100,
             opacity: 0,
           }}
           whileInView={{
@@ -91,10 +89,10 @@ const Projects = () => {
           transition={{
             duration: 1,
           }}
-          viewport={{once:true,amount:.5}}
+          viewport={{ once: true, amount: 0.5 }}
           className={styles.frame}
         >
-          <Image src="/foodfrenzy.png" alt="foodfrenzy" fill />
+          <Image src={"/food.png"} alt="foodfrenzy" fill />
           <div className={styles.projectText}>
             <h3>FoodFrenzy</h3>
             <h4>Food delivery service application</h4>
@@ -111,7 +109,7 @@ const Projects = () => {
         </motion.div>
         <motion.div
           initial={{
-            x: 200,
+            x: 100,
             opacity: 0,
           }}
           whileInView={{
@@ -121,7 +119,7 @@ const Projects = () => {
           transition={{
             duration: 1,
           }}
-          viewport={{once:true,amount:.5}}
+          viewport={{ once: true, amount: 0.5 }}
           className={styles.frame}
         >
           <Image src="/wetube.png" alt="wetube" fill />

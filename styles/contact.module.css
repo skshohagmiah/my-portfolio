@@ -82,6 +82,9 @@
     .container{
         flex-direction: column-reverse;
     }
+    .contactForm{
+        padding: .5rem;
+    }
     .mobileContact{
         display: block;
         text-align: center;

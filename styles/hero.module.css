@@ -88,12 +88,15 @@
     border-radius: .5rem;
     border: none;
     background: linear-gradient(90deg, rgba(201,186,197,1) 15%, rgba(200,151,224,1) 40%, rgba(209,134,202,1) 74%, rgba(211,142,215,1) 100%);
+    transition: all .3s ease-out;
+    cursor: pointer;
+}
+
+.buttons button a{
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 1rem;
-    transition: all .3s ease-out;
-    cursor: pointer;
 }
 
 .buttons button:hover{

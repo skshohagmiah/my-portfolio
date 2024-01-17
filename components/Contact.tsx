@@ -1,15 +1,17 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import styles from "@/styles/contact.module.css";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useActiveSection } from "@/context/ActiveSectionContext";
+import { sendEmail } from "@/action/sendEmail";
+import { useRouter } from "next/navigation";
 
 const Contact = () => {
-
     const [thanks, setThanks] = useState('')
     const [count, setCount] = useState(0)
 
+    const formRef= useRef<HTMLFormElement>(null);
     const {ref,inView }= useInView({threshold:.5})
     const {setActiveSection} = useActiveSection()
   
@@ -39,7 +41,7 @@ const Contact = () => {
     <section ref={ref} className={styles.container} id="contact">
       <motion.div
         initial={{
-          x: -200,
+          x: -100,
           opacity: 0,
         }}
         whileInView={{
@@ -65,7 +67,7 @@ const Contact = () => {
       </motion.div>
       <motion.div
         initial={{
-          x: 200,
+          x: 100,
           opacity: 0,
         }}
         whileInView={{
@@ -81,12 +83,17 @@ const Contact = () => {
         <h2 className={styles.mobileContact}>Contact Me</h2>
         <p>great vision without great people is irrelevant So</p>
         <h3>Let`s work together</h3>
-        <form action="">
-          <input type="text" placeholder="Enter Your Name" required/>
-          <input type="email" placeholder="Enter Your Email" required/>
-          <textarea rows={10} cols={30} placeholder="Write Your Message" required>
+        <form ref={formRef}  action={(formdata:FormData) => {
+          sendEmail(formdata)
+          formRef.current?.reset()
+        }} >
+          <input type="text" name="name" placeholder="Enter Your Name" required/>
+          <input type="email" name="email" placeholder="Enter Your Email" required/>
+          <textarea rows={10} cols={30} name="message" placeholder="Write Your Message" required>
           </textarea>
-          <button type="submit">Send</button>
+          <button type="submit">
+            send
+          </button>
         </form>
       </motion.div>
     </section>

@@ -40,8 +40,8 @@
 @media screen and (max-width:768px) {
     .container{
         top: .5rem;
-        left: 2rem;
-        right: 2rem;
+        left: 1rem;
+        right: 1rem;
         transform: translateX(0) !important;
         
         padding: .5rem .1rem;
